@@ -1,0 +1,36 @@
+<var name="todo"></var>
+<app>
+    <div class="hero min-h-screen  ">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-xl font-bold">Dox Todo App</h1>
+             <span map="todo"  id="maps"></span>  
+             <div class="items-center mt-12">
+              <input type="text" class="w-full px-4 py-3 mr-4 text-gray-700 bg-gray-200 rounded-lg focus:outline-none" placeholder="Add Todo"
+              onchange="setState('todo',this.value)"
+              >
+              <button class="btn bg-blue-500 w-full text-white mt-2 btn-sm"
+              id="add-todo"
+              >Add</button>
+              <a href="/tes">e</a>
+              <img src="https://play-lh.googleusercontent.com/1-hPxafOxdYpYZEOKzNIkSP43HXCNftVJVttoo4ucl7rsMASXW3Xr6GlXURCubE1tA=w3840-h2160-rw"
+              width="100px" height="100px"
+              >
+              </div>
+             
+          </div>
+        </div>
+      </div>
+      {{map(todo).return(){
+        <div id="container-{todo.id}">
+            <span id="{todo.id}" class="text-gray-700 mt-5 flex flex-col text-start border-b border-gray-300">{todo.todo}</span>
+            <button class="btn btn-sm btn-outline w-full btn-error mt-2" 
+            onclick="setState('delete', '{todo.id}')"
+            >Delete</button>
+        </div>
+       
+      }}}
+</app>
+<export>
+    app
+</export>
