@@ -1170,7 +1170,7 @@ class Router {
                 let rendered = window.render - performance.now()
                 rendered = Math.abs(rendered).toFixed(2)
                 
-                window.dox = dox;
+               
                 document.title = parent.getAttribute('title');
               
                 window.rerender(element.tagName)
@@ -1183,6 +1183,7 @@ class Router {
                 let comment = document.createComment(`${element.tagName} Rendered in ${rendered}ms`);
                 dom.body.prepend(comment)
                 element.innerHTML =  dom.body.innerHTML;
+                window.dox = dox;
                
             }  
         });
