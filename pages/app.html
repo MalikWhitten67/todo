@@ -23,7 +23,7 @@
       {{map(todo).return(){
         <div id="container-{todo.id}">
             <span id="{todo.id}" class="text-gray-700 mt-5 flex flex-col text-start border-b border-gray-300">{todo.todo}</span>
-            <button class="btn btn-sm btn-outline w-full btn-error mt-2" 
+            <button class="btn btn-sm w-full bg-red-500 text-white mt-2" 
             onclick="setState('delete', '{todo.id}')"
             >Delete</button>
         </div>
