@@ -1,4 +1,4 @@
-# Html-dox basic todo app - using state management and dox map() function!
+### Basic todo app built with dox - using state management and dox map() function!
 
 # Installation
  - fork or download and run in your browser!
